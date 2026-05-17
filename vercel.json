@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "experimentalServices": {
     "frontend": {
       "entrypoint": "frontend",
@@ -8,17 +7,9 @@
     },
     "backend": {
       "entrypoint": "backend",
-      "routePrefix": "/_/backend"
+      "routePrefix": "/_/backend",
+      "installCommand": "npm install",
+      "buildCommand": "npm run start"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/_/backend/(.*)",
-      "destination": "/backend/api/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
-    }
-  ]
+  }
 }
